@@ -50,7 +50,7 @@ function rezultats(){
     if (irTrijsturis(m1,m2,m3)==false){
         t="Trijstūris neeksistē, jo jebkuru 2 malu garumu summai ir jābūt lielākai par trešo malu!";
     } else{
-        t = "Trijsturis ar malu garumiem" +m1 +"," + m2 + "un " + m3 + "eksistē."
+        t = "Trijsturis ar malu garumiem " +m1 +" ," + m2 + " un " + m3 + " eksistē."
         if(m1==m2 && m2==m3){
             t+="Tas ir vienādmalu trijsturis."
         }
@@ -61,7 +61,7 @@ function rezultats(){
         }
         const p = perimetrs(m1,m2,m3);
         const s = Math.round(laukums(m1,m2,m3) * 100) / 100 ;
-        t+= "Perimetrs ir " + p + " un laukums ir " +s + ".";
+        t+= " Perimetrs ir " + p + " un laukums ir " +s + ".";
     }
     }
     console.log(t);
@@ -71,7 +71,7 @@ function izvadaTekstu(){
     const teksts = rezultats();
     console.log(teksts);
     const sakne=document.getElementById("izvade");
-    const raksti=document.getElementById("p");
-    raksti.innerHTML=teksts;
+    const raksti=document.createElement("p");
+    raksti.innerHTML = teksts;
     sakne.appendChild(raksti);
 }
